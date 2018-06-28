@@ -6,8 +6,6 @@ Any paper that is written that needs to reference this tool should reference:
 > M. Olsen, J. Laspesa, T. Taylor-D'Ambrosio. ON GENETIC ALGORITHM EFFECTIVENESS FOR FINDING BEHAVIORS IN
 AGENT-BASED PREDATOR PREY MODELS. Proceedings of the Summer Simulation Multi-Conference (SummerSim'18). July 2018.
 
-The code that was used in the SummerSim 2018 paper will be uploaded here before the start of the conference.
-
 ## Folders
 
 A README within each folder will give details on its files:

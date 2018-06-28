@@ -1,0 +1,6 @@
+initial-number-sheep,1,250,1
+initial-number-wolves,1,250,1
+sheep-gain-from-food,0,50,1
+wolf-gain-from-food,0,100,1
+sheep-reproduce,1,20,1
+wolf-reproduce,0,20,1

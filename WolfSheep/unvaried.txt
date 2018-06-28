@@ -1,0 +1,3 @@
+show-energy? false
+grass? false
+grass-regrowth-time 30

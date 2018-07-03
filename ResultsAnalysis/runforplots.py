@@ -8,7 +8,7 @@ PREFIX = sys.argv[1]
 INPUT_FILE = sys.argv[2]
 VERBOSE=False
 MODEL_NAME="WolfSheepPlot.nlogo"
-MAX_STEPS=1000
+MAX_STEPS=100000
 NUM_RUNS=3
 NUM_CONCURRENT = 3 #number of parameter sets to run concurrently. All runs of a parameter set alreays run concurrently.
 
@@ -87,7 +87,7 @@ def write_file_NetLogo(data, filename):
 ######### Code for Starting NetLogo Processes ##########
 def child_process(instance,filename):
     # args has all arguments for executing the netlogo model run file, netlogo-mac-app.jar OR NetLogo.jar depending on OS
-    args = ["java","-Xms3072m","-classpath", ".:../lib:../lib/netlogo-mac-app.jar:../API","RunNetLogoModel"]
+    args = ["java","-Xms3072m","-classpath", ".:../lib:../lib/NetLogo.jar:../API","RunNetLogoModel"]
     # model name, input file name, number of steps, report name
     args.append(MODEL_NAME)#"../WolfSheep/WolfSheep.nlogo")
     args.append(filename) #input file, which is the same for all seeds
@@ -233,11 +233,11 @@ def output_minmax(data,filename):
     #output result if it's one of the undesired scenarios
     if min(sheep) == 0:
         print("sdie/",end="")
-    elif max(sheep) > 10000:
+    elif max(sheep) > 8500:
         print("s10k/",end="")
     if min(wolf) == 0:
         print("wdie/",end="")
-    elif max(wolf) > 10000:
+    elif max(wolf) > 8500:
         print("w10k/",end="")
 
     print("") #line break
